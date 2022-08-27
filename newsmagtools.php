@@ -25,25 +25,25 @@
 /**
  * Activate the plugin.
  */
-function newsmagtools_activate() { 
+function newsmagtools-bondhon_activate() { 
     // Trigger our function that registers the custom post type plugin.
-    newsmagtools_setup_post_type(); 
+    newsmagtools-bondhon_setup_post_type(); 
     // Clear the permalinks after the post type has been registered.
     flush_rewrite_rules(); 
 }
-register_activation_hook( __FILE__, 'newsmagtools_activate' );
+register_activation_hook( __FILE__, 'newsmagtools-bondhon_activate' );
 
 
 /**
  * Deactivation hook.
  */
-function newsmagtools_deactivate() {
+function newsmagtools-bondhon_deactivate() {
     // Unregister the post type, so the rules are no longer in memory.
     unregister_post_type( 'book' );
     // Clear the permalinks to remove our post type's rules from the database.
     flush_rewrite_rules();
 }
-register_deactivation_hook( __FILE__, 'newsmagtools_deactivate' );
+register_deactivation_hook( __FILE__, 'newsmagtools-bondhon_deactivate' );
 
 
-register_uninstall_hook(    __FILE__, 'newsmagtools_function_to_run' );
+register_uninstall_hook(    __FILE__, 'newsmagtools-bondhon_function_to_run' );

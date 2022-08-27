@@ -25,23 +25,25 @@
 /**
  * Activate the plugin.
  */
-function pluginprefix_activate() { 
+function newsmagtools_activate() { 
     // Trigger our function that registers the custom post type plugin.
     pluginprefix_setup_post_type(); 
     // Clear the permalinks after the post type has been registered.
     flush_rewrite_rules(); 
 }
-register_activation_hook( __FILE__, 'pluginprefix_activate' );
+register_activation_hook( __FILE__, 'newsmagtools_activate' );
 
 
 /**
  * Deactivation hook.
  */
-function pluginprefix_deactivate() {
+function newsmagtools_deactivate() {
     // Unregister the post type, so the rules are no longer in memory.
     unregister_post_type( 'book' );
     // Clear the permalinks to remove our post type's rules from the database.
     flush_rewrite_rules();
 }
-register_deactivation_hook( __FILE__, 'pluginprefix_deactivate' );
+register_deactivation_hook( __FILE__, 'newsmagtools_deactivate' );
 
+
+register_uninstall_hook(    __FILE__, 'WCM_Setup_Demo_on_uninstall' );

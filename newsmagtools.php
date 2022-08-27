@@ -46,4 +46,4 @@ function newsmagtools_deactivate() {
 register_deactivation_hook( __FILE__, 'newsmagtools_deactivate' );
 
 
-register_uninstall_hook(    __FILE__, 'WCM_Setup_Demo_on_uninstall' );
+register_uninstall_hook(    __FILE__, 'newsmagtools_function_to_run' );

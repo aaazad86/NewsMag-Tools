@@ -38,10 +38,29 @@ register_activation_hook( __FILE__, 'newsmagtools-bondhon_activate' );
  * https://developer.wordpress.org/themes/functionality/widgets/
  */
 
+
+/**
+    * Adds date display widget
+*/
+
+class Foo_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	public function __construct() {
+		parent::__construct(
+			'datedisplay_widget', // Base ID
+			'Date_Display_Widget', // Name
+			array( 'description' => __( 'A English Date Display Widget'), ) // Args
+        );
+    }
+	
+}
 /**
     * Adds Foo_Widget widget.
     * Simple Text Widget Start
- */
+*/
 class Foo_Widget extends WP_Widget {
 
 	/**

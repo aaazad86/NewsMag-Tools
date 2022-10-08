@@ -133,3 +133,12 @@ class Foo_Widget extends WP_Widget {
 /**
  *Simple Text Widget regester 
  */
+
+// Register Foo_Widget widget
+add_action( 'widgets_init', 'register_foo' );
+    
+function register_foo() { 
+    register_widget( 'Foo_Widget' ); 
+}
+
+

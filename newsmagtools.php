@@ -33,16 +33,6 @@ function newsmagtools-bondhon_activate() {
 register_activation_hook( __FILE__, 'newsmagtools-bondhon_activate' );
 
 
-/**
- * Deactivation hook.
- */
-function newsmagtools-bondhon_deactivate() {
-    
-}
-register_deactivation_hook( __FILE__, 'newsmagtools-bondhon_deactivate' );
-
-
-register_uninstall_hook(    __FILE__, 'newsmagtools-bondhon_function_to_run' );
 
 /**
  * https://developer.wordpress.org/themes/functionality/widgets/
@@ -142,3 +132,14 @@ function register_foo() {
 }
 
 
+
+/**
+ * Deactivation hook.
+ */
+function newsmagtools-bondhon_deactivate() {
+    
+}
+register_deactivation_hook( __FILE__, 'newsmagtools-bondhon_deactivate' );
+
+
+register_uninstall_hook(    __FILE__, 'newsmagtools-bondhon_function_to_run' );
